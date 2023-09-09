@@ -15,7 +15,6 @@ import com.bank.qa.pages.LoginPage;
 import com.bank.qa.listener.CustomListener;
 
 //@Listeners(CustomListener.class)
-// Home Page Test
 public class HomePageTest extends TestBase{
 
 	LoginPage loginPage;
