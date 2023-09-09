@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Bank Application Automation Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GURU Bank Site Test(failed)">
+    <classes>
+      <class name="com.bank.qa.testcases.HomePageTest">
+        <methods>
+          <include name="verifyEditLinkTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyManagerLabel"/>
+        </methods>
+      </class> <!-- com.bank.qa.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- GURU Bank Site Test(failed) -->
+</suite> <!-- Failed suite [Bank Application Automation Test] -->
