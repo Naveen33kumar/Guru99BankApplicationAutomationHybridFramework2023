@@ -9,10 +9,19 @@
       <class name="com.bank.qa.testcases.HomePageTest">
         <methods>
           <include name="tearDown"/>
+          <include name="verifyEditLinkTest"/>
           <include name="verifyHomePageTitle"/>
           <include name="setup"/>
+          <include name="verifyManagerLabel"/>
         </methods>
       </class> <!-- com.bank.qa.testcases.HomePageTest -->
+      <class name="com.bank.qa.testcases.LoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.bank.qa.testcases.LoginTest -->
     </classes>
   </test> <!-- GURU Bank Site Test(failed) -->
 </suite> <!-- Failed suite [Bank Application Sanity Automation Test] -->
