@@ -24,6 +24,15 @@ public class CustomListener extends TestUtils implements ITestListener{
 	ExtentTest extentTest;
 	String testName;
 	
+	public void onStart(ITestContext context) {
+		try {
+			  extentReport  = ExtentReporterNG.generateExtentReport();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
 	public void onTestStart(ITestResult result) {
 	    testName = result.getName();
 	    extentTest = extentReport.createTest(testName);
@@ -42,15 +51,18 @@ public class CustomListener extends TestUtils implements ITestListener{
 		extentTest.log(Status.SKIP,testName+" Got Skipped ");
 	}
 
-	public void onStart(ITestContext context) {
-		try {
-			  extentReport  = ExtentReporterNG.generateExtentReport();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
+	public void onTestFailure(ITestResult result)
+	{
+		testName = result.getName();
+		
+		String fileDestination = TestUtils.takeScreenShot(testName);
+		
+		extentTest.addScreenCaptureFromPath(fileDestination);
+		extentTest.log(Status.INFO,result.getThrowable());
+		//extentTest.log(Status.FAIL,result.getThrowable());
+		extentTest.log(Status.FAIL,testName+" Got Failed ");	
 	}
-
+	
 	public void onFinish(ITestContext context) {
 		extentReport.flush();
 		String pathOfExtentReport = System.getProperty("user.dir")+"\\test-output\\ExtentReports\\extentReport.html";
@@ -62,17 +74,5 @@ public class CustomListener extends TestUtils implements ITestListener{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-
-	public void onTestFailure(ITestResult result)
-	{
-		testName = result.getName();
-		
-		String fileDestination = TestUtils.takeScreenShot(testName);
-		
-		extentTest.addScreenCaptureFromPath(fileDestination);
-		extentTest.log(Status.INFO,result.getThrowable());
-		extentTest.log(Status.FAIL,result.getThrowable());
-		extentTest.log(Status.INFO,testName+" Got Failed ");	
 	}
 }

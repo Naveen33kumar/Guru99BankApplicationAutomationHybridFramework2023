@@ -15,20 +15,20 @@
       </class> <!-- com.bank.qa.testcases.EditAccountPageTest -->
       <class name="com.bank.qa.testcases.HomePageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="verifyEditLinkTest"/>
+          <include name="tearDown"/>
           <include name="verifyHomePageTitle"/>
           <include name="setup"/>
           <include name="verifyManagerLabel"/>
         </methods>
       </class> <!-- com.bank.qa.testcases.HomePageTest -->
-      <class name="com.bank.qa.testcases.LoginTest">
+      <class name="com.bank.qa.testcases.LoginPageInvalidLoginsTest">
         <methods>
           <include name="setup"/>
-          <include name="verifyLogin"/>
+          <include name="verifyInvalidLogins"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.bank.qa.testcases.LoginTest -->
+      </class> <!-- com.bank.qa.testcases.LoginPageInvalidLoginsTest -->
     </classes>
   </test> <!-- GURU Bank Site Test(failed) -->
 </suite> <!-- Failed suite [Bank Application Regression Automation Test] -->

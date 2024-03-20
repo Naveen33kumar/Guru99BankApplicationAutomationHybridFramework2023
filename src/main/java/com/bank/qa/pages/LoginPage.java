@@ -52,8 +52,5 @@ public class LoginPage extends TestBase{
 	public boolean validateSiteLogo()
 	{
 		return siteLogo.isDisplayed();
-		
 	}
-	
-	
 }

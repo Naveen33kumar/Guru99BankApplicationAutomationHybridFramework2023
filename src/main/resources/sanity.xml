@@ -12,6 +12,7 @@
   <test name="GURU Bank Site Test">
     <classes>
       
+       <class name="com.bank.qa.testcases.LoginPageInvalidLoginsTest" />
       <class name="com.bank.qa.testcases.LoginTest" />
        <class name="com.bank.qa.testcases.HomePageTest" />
       

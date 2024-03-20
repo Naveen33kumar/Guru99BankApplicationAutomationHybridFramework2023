@@ -23,7 +23,7 @@ public class ExtentReporterNG extends TestBase implements ITestListener{
 	
 	sparkReporter.config().setTheme(Theme.STANDARD);
 	sparkReporter.config().setReportName("Guru99 Bank Application Automation Test Report");
-	sparkReporter.config().setDocumentTitle("Guru99 Bank Application");
+	sparkReporter.config().setDocumentTitle("Guru99 Bank Application Test Report");
 	sparkReporter.config().setTimeStampFormat("dd/MM/yyyy hh:mm:ss");
 	
 	extentReport.attachReporter(sparkReporter);

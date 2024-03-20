@@ -16,18 +16,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-
 import com.bank.qa.utils.TestUtils;
-import com.bank.qa.utils.WebEventListener;
 
 public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	//public static EventFiringWebDriver e_driver;
-	public static WebEventListener eventListener;
 	
 	public TestBase()
 	{
