@@ -7,8 +7,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.poi.ss.formula.atp.Switch;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
